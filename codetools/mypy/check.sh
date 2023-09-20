@@ -5,3 +5,4 @@ set -e
 cd "$(dirname "$0")/../.."
 
 mypy --package id_key_collections
+mypy --package tests
