@@ -2,4 +2,4 @@
 
 cd "$(dirname "$0")"
 
-pydocstyle ../../id_key_collections
+pydocstyle ../../id_key_collections ../../tests
