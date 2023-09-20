@@ -8,9 +8,9 @@ _TValue = TypeVar("_TValue")
 
 class IdKeyDict(MutableMapping[_TKey, _TValue], Generic[_TKey, _TValue]):
     """
-    A Dictionary that uses the id of objects as keys.
+    A dictionary that uses the id of objects as keys.
 
-    Otherwise, behaves exactly like a standard Dictionary.
+    Otherwise, behaves exactly like a standard set.
     Key objects are explicitly stored to prevent garbage collection.
     """
 
@@ -57,16 +57,16 @@ class IdKeyDict(MutableMapping[_TKey, _TValue], Generic[_TKey, _TValue]):
 
     def __contains__(self, key: object) -> bool:
         """
-        Check if the key is in the Dictionary.
+        Check if the key is in the dictionary.
 
         :param key: The key to check.
-        :returns: True if key is in the Dictionary, False otherwise.
+        :returns: True if key is in the dictionary, False otherwise.
         """
         return id(key) in self._inner_mapping
 
     def __len__(self) -> int:
         """
-        Get the number of items in the Dictionary.
+        Get the number of items in the dictionary.
 
         :returns: The number of items.
         """
