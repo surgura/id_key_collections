@@ -1,2 +1,2 @@
 # IdKeyCollections
-Collections that use the id of objects as key.
+Collections that use the id of objects as keys.
